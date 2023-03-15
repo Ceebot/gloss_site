@@ -1,0 +1,241 @@
+@import "../css/normalize.css";
+@import "../css/bootstrap-5.2.2/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/comfortaa/comfortaa.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/comfortaa/comfortaa.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("../fonts/comfortaa/comfortaa.otf") format("opentype"), /* Open Type Font */ url("../fonts/comfortaa/comfortaa.svg") format("svg"), /* Legacy iOS */ url("../fonts/comfortaa/comfortaa.ttf") format("truetype"), /* Safari, Android, iOS */ url("../fonts/comfortaa/comfortaa.woff") format("woff"), /* Modern Browsers */ url("../fonts/comfortaa/comfortaa.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* media var*/
+
+@media1240: ~'(max-width: 1240px)';
+@media1024: ~'(max-width: 1024px)';
+@media768: ~'(max-width: 768px)';
+@media480: ~'(max-width: 480px)';
+
+@media1240h: ~'(max-height: 1240px)';
+@media1024h: ~'(max-height: 1024px)';
+@media768h: ~'(max-height: 768px)';
+@media480h: ~'(max-height: 480px)';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: #414141;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  background-color: #faf8fb;
+}
+
+td {
+  white-space: nowrap;
+}
+
+.table-wrap {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 50px;
+
+  @media screen and @media1024 {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px; /* ширина scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #212529; /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: white; /* цвет плашки */
+      border-radius: 20px; /* закругления плашки */
+      border: 3px solid #212529; /* padding вокруг плашки */
+
+      &:hover {
+        background-color: #a978dc;
+      }
+    }
+  }
+}
+
+.logo-img {
+  height: 80px;
+}
+
+.animate {
+  animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 16px;
+  animation: animateFalse .3s;
+}
+
+.loading {
+  height: 25px;
+}
+
+.case {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: initial;
+}
+
+.close {
+  margin-top: 10px;
+  background-color: #eeaeae;
+  color: black;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@keyframes animateFalse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.3s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in 0.3s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup-edit {
+  position: fixed;
+  width: 120px;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a978dc;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__only-btn {
+    width: 60px;
+    height: 70px;
+  }
+
+  &_wrapper {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: initial;
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    width: 45px;
+    height: 40px;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__img {
+    border: none;
+    background: transparent;
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

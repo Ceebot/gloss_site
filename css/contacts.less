@@ -1,0 +1,79 @@
+@import "../css/common-style.less";
+
+.contacts {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid #e4e4e4;
+
+  @media @media768 {
+    padding: 50px 0;
+  }
+
+  &__list {
+    margin-top: 43px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media @media768 {
+      grid-template-columns: 1fr;
+      grid-row-gap: 40px;
+    }
+  }
+
+  &__div {
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: auto 23px;
+    background-color: transparent;
+  }
+
+  &__info {
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #787878;
+    font-style: normal;
+    margin-top: 30px;
+  }
+
+  &__gps {
+    background-image: url('../img/gps.png');
+    padding-left: 30px;
+    padding-top: 4px;
+  }
+
+  &__phone {
+    background-image: url('../img/phone.png');
+    padding-left: 30px;
+    padding-top: 4px;
+  }
+
+  &__mail {
+    background-image: url('../img/mail.png');
+    padding-left: 45px;
+    padding-top: 4px;
+    width: 10px;
+
+  }
+
+  &__heading {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 17px;
+    line-height: 1;
+    color: #1c1c1c;
+  }
+
+  &__link {
+    color: #787878;
+  }
+
+  &__map {
+    margin-top: 40px;
+
+    @media @media768 {
+      width: 100%;
+    }
+  }
+}

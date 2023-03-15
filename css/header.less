@@ -1,0 +1,138 @@
+@import "../css/common-style.less";
+
+.header {
+  height: 110px;
+  border-bottom: 1px solid #e4e4e4;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__menu {
+    height: 70px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    line-height: 1;
+    font-size: 15px;
+    cursor: pointer;
+
+    &_settings {
+      position: relative;
+    }
+
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+
+    &:first-child {
+      display: none;
+    }
+
+    @media @media1024 {
+      &:first-child {
+        display: block;
+      }
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: #1c1c1c;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #a978dc;
+    }
+
+    &_burger {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &__link_none {
+    color: #1c1c1c;
+    cursor: initial;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 0 3px 12px;
+  }
+}
+
+.burger {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 100%;
+  background-color: black;
+  transition: transform .3s ease-in-out;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  &__item {
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &_close {
+      width: 100%;
+      background-color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 20px 10px;
+      text-align: center;
+      cursor: pointer;
+      color: black;
+      font-size: 25px;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: #a978dc;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 25px;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: color .3s ease-in-out;
+
+    &_user {
+      border-bottom: none;
+    }
+
+    &:hover {
+      color: #a978dc;
+    }
+  }
+}

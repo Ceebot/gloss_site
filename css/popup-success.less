@@ -1,0 +1,37 @@
+@import "../css/common-style.less";
+
+.check-mark {
+
+  &__content {
+    padding: 30px 50px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__img {
+    height: 140px;
+  }
+
+  &__close {
+    background-color: #a978dc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      color: black;
+      opacity: 0.8;
+    }
+
+  }
+}
